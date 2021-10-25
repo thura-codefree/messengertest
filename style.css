@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Yaldevi:wght@600;700&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #595959;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    user-select:none;
+    
+}
+
+.hamburgerLine{
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    z-index: 6;
+    position: fixed;
+    display: none;
+    
+}
+
+.line{
+    width: 30px;
+    height: 4px;
+    background-color: #000000;
+    margin: 5px 0px;
+    border-radius: 25%;
+}
+
+.hideLine2{
+    opacity: 0;
+}
+.rotatePlus45deg{
+    transform: rotate(45deg) translate(4px, 9px);
+    border-radius: 30px;
+}
+.rotateMinus45deg{
+    transform: rotate(-45deg) translate(4px, -9px);
+    border-radius: 30px;
+}
+.line1,.line2,.line3{
+    transition: all 0.5s ease;
+}
+
+.overlayMenu{
+    top: 95px;
+    right: 20px;
+    background-color: rgb(255, 255, 255);
+    color: #7D7D7D;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    padding-top: 10px;
+    z-index: 5;
+    opacity: 1;
+    display: none;
+}
+
+.overlayMenuShow{
+    display: block;
+}
+li{
+    list-style: none;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #FAFAFA;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: tranform 3s ease;
+    
+}
+.moveLiTagUp{
+    transform: translateY(-10px);
+}
+
+li a{
+    text-decoration: none;
+    color: #7D7D7D;
+    font-size: 30px;
+    padding: 5px;
+    
+}
+
+li a:hover{
+    border-bottom: solid 3px rgb(122, 122, 233);
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ffffff;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    padding: 25px 70px;
+    border-bottom: solid 1px rgb(236, 228, 228);
+    z-index: 1;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+.left{
+    flex: 50%;
+    padding-left: 20px;
+    /* padding-left: 50px; */
+    
+}
+.right{
+   
+    flex: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.gradient-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    text-align: left;
+    line-height: 90px;
+    letter-spacing: -4px;
+    width: 440px;
+    
+    /* Fallback: Set a background color. */
+    /* background-color: white; */
+    
+    /* Create the gradient. */
+    background-image: linear-gradient(
+        83.84deg, rgb(0, 136, 255) -6.87%, rgb(160, 51, 255) 26.54%, rgb(255, 92, 135) 58.58%);
+    /* background-image: url(img/bgtext.jpg); */
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.appStore{
+    width: 120px;
+    height: 45px;
+    cursor: pointer;
+}
+.rightImage{
+    width: 100%;
+    background-color: white;
+}
+.menuItem a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    line-height: 50px;
+    margin: 3px;
+    padding: 5px;
+    font-size: 15px;
+}
+.menuItem a:hover{
+    border-bottom: solid 3px rgb(122, 122, 233);
+}
+
+.left p{
+    margin-bottom: 40px;
+}
+.inputs{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #f5f5f5;
+    width: 300px;
+    height: 35px;
+    border-radius: 3px;
+    outline: none;
+    padding: 20px;
+    font-size: 16px;
+
+}
+.btn{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+.btn button{
+    border-radius: 15px;
+    width:90px;
+    height: 30px;
+    margin-right: 15px;
+    background-color: rgb(94, 94, 226);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+.btn button:hover{
+    background-color: blue;
+}
+.footer{
+    margin: 10px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.policy a{
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.languages form select{
+    border: none;
+    outline: none;
+    color: inherit;
+    overflow: scroll;
+}
+
+@media (min-width:760px){
+    .overlayMenu{
+        display: none;
+    }
+}
+
+
+@media (max-width:950px){
+    .left,.right{
+        flex: 100%;
+        justify-items: center;
+        align-items: center;
+    }
+    .gradient-text{
+        font-size: 50px;
+        line-height: 60px;
+        letter-spacing: -2px;
+        text-align: center;
+        width: 100%;
+    }
+    
+}
+@media (max-width:760px){
+ 
+    .menuItem{
+        display: none;
+        
+    }
+    .hamburgerLine{
+        display: block;
+    }
+
+}
+@media (max-width:600px){
+     .left,.right{
+        flex: 100%;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    .menu{
+        padding: 25px 20px;
+    }
+    .logo {
+        margin-left: 0;
+    }
+   
+    .menuItem {
+        display: none;
+    }
+    .hamburgerLine{
+        display: block;
+    }
+ 
+    .container{
+        margin:20px;
+        
+    }
+    .gradient-text{
+        font-size: 50px;
+        line-height: 60px;
+        letter-spacing: -2px;
+        text-align: left;
+        width: 100%;
+    }
+    .inputs{
+        width: 100%;
+    }
+    .footer{
+        text-align: center;
+        flex-direction: column;
+        align-content: space-between;
+        height: 200px;
+    }
+}
+
