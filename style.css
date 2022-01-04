@@ -239,6 +239,11 @@ li a:hover{
     outline: none;
     color: inherit;
     overflow: scroll;
+    cursor: pointer;
+}
+.languages:hover {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
 }
 
 @media (min-width:760px){
